@@ -1,0 +1,29 @@
+<?php
+
+function simple_contact_form_alter(&$form, &$form_state, $form_id){
+   if($form_id == 'node_type_form'){
+     $form['display']['node_submitted']['#default_value'] = 0;
+     $form['display']['node_submitted']['#description'] = t('this is my new description');
+   }
+
+   if($form_id == 'contact_site_form'){
+
+// HIDDING SUBJECT LINE
+       unset($form['subject']);
+       $form['subject'] = array(
+           '#type' => 'hidden',
+           '#default_value' => t('Feedback'),
+       );
+//Hiding checkbox
+        unset($form['copy']);
+        $form['copy'] = array(
+
+            '#type' => 'hidden',
+            "#default_value" => 1,
+        );
+   }
+}
+
+//print '<pre>';
+//print_r($form);
+//print '</pre>';

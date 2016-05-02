@@ -1,0 +1,5 @@
+name = Simple Contact
+description = simplifies contact form
+package = custom modules
+core = 7.x
+files[] = simple_contact.module
