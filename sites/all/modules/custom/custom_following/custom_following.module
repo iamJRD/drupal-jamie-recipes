@@ -13,4 +13,12 @@ function custom_following_follow_networks_alter(&$networks, $uid = 0){
         'title' => t('Etsy'),
         'domain' => 'etsy.com',
     );
+    $networks[$uid]['redbubble'] = array(
+        'title' => t('Redbubble'),
+        'domain' => 'redbubble.com',
+    );
+}
+
+function custom_following_page_build(&$page) {
+    drupal_flush_all_caches();
 }
