@@ -1,0 +1,5 @@
+name = Simple Content
+description = simplifies menus on content submission forms
+package = custom modules
+core = 7.x
+files[] = simple_content.module

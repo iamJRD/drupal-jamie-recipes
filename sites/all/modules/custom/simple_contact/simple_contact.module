@@ -17,7 +17,6 @@ function simple_contact_form_alter(&$form, &$form_state, $form_id){
 //Hiding checkbox
         unset($form['copy']);
         $form['copy'] = array(
-
             '#type' => 'hidden',
             "#default_value" => 1,
         );

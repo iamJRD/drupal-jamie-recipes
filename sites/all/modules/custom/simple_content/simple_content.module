@@ -1,0 +1,51 @@
+<?php
+
+function simple_content_form_alter(&$form, &$form_state, $form_id){
+
+   if($form_id == 'recipe_node_form'){
+    //    print '<pre>';
+    //    print_r($form);
+    //    print '</pre>';
+// // HIDDING SUBJECT LINE
+       unset($form['revision_information']);
+       $form['revision_information'] = array(
+           '#type' => 'hidden',
+       );
+
+       unset($form['path']);
+       $form['path'] = array(
+           '#type' => 'hidden',
+       );
+
+       unset($form['comment_settings']);
+       $form['comment_settings'] = array(
+           '#type' => 'hidden',
+       );
+
+       unset($form['author']);
+       $form['author'] = array(
+           '#type' => 'hidden',
+       );
+
+       unset($form['options']);
+       $form['options'] = array(
+           '#type' => 'hidden',
+       );
+
+       unset($form['additional_settings']);
+       $form['additional_settings'] = array(
+           '#type' => 'hidden',
+       );
+
+       unset($form['menu']);
+       $form['menu'] = array(
+           '#type' => 'hidden',
+       );
+// //Hiding checkbox
+//         unset($form['copy']);
+//         $form['copy'] = array(
+//             '#type' => 'hidden',
+//             "#default_value" => 1,
+//         );
+   }
+}
