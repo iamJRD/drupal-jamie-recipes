@@ -1,0 +1,6 @@
+<?php
+    $visible = false;
+    if ( arg(0) == "user" && is_numeric(arg(1)) && !arg(2) ){
+      $visible = true;
+    }
+    return $visible;

@@ -1,0 +1,5 @@
+name = Chef's Recipes
+description = Displays only the recipes belonging to the current chef.
+package = custom modules
+core = 7.x
+files[] = chef_recipes.module
