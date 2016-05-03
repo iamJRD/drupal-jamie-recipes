@@ -19,6 +19,6 @@ function custom_following_follow_networks_alter(&$networks, $uid = 0){
     );
 }
 
-function custom_following_page_build(&$page) {
-    drupal_flush_all_caches();
-}
+// function custom_following_page_build(&$page) {
+//     drupal_flush_all_caches();
+// }
